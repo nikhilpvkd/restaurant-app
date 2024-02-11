@@ -2,13 +2,18 @@
 
 This is a restaurent application working model build in react framework
 
+## Clone the project
+
+    $ git clone https://github.com/nikhilpvkd/restaurant-app.git
+    $ cd ../path/to/the/file
+
 ## Install
 
-    npm install
+    $ npm install
 
 ## Run the app
 
-    npm run dev
+    $ npm run dev
 
 ## Folder structure
 
@@ -42,9 +47,7 @@ This is a restaurent application working model build in react framework
 
 ## packages installed
 
----
-
-A list of technologies used within the project:
+A list of packages used within the project:
 
 -   [redux-toolkit](https://redux-toolkit.js.org/)
 -   [styled-components](https://styled-components.com/)
