@@ -3,9 +3,9 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 import VegIcon from "../assets/icons/Veg";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
-import { addToOrders, getAllOrders, removeFromOrders } from "../features/orderSlice";
+import { addToOrders, getOrderCountById, removeFromOrders } from "../features/orderSlice";
 
-const DishCard = ({ dish, orderCount = 0 }) => {
+const DishCard = ({ dish }) => {
     const dispatch = useDispatch();
     const {
         dish_id,
@@ -19,6 +19,7 @@ const DishCard = ({ dish, orderCount = 0 }) => {
         dish_Type,
         addonCat,
     } = dish;
+    const orderCount = useSelector(getOrderCountById(dish_id));
 
     return (
         <Wrapper>

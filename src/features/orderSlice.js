@@ -53,4 +53,8 @@ export const {
 export const getAllCategories = (state) => state.orders.dishCategories;
 export const getActiveDishes = (state) => state.orders.activeDishes;
 export const getTotalOrderCount = (state) => state.orders.allOrders.length;
+export const getOrderCountById = (orderID) => (state) => {
+    const res = state.orders.allOrders.filter((currOrderId) => currOrderId === orderID);
+    return res.length;
+};
 export const getAllOrders = (state) => state.orders.allOrders;
