@@ -1,0 +1,30 @@
+@import url("./assets/css/nunito.css");
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font-weight: normal;
+    text-decoration: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "nunito-regular";
+    color: #cdcfd1;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "nunito-regular";
+    box-sizing: border-box;
+    background: #00050f;
+}
+
+.wrapper {
+    max-width: 1250px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
