@@ -17,7 +17,7 @@ const Tabs = ({ onChange }) => {
         if (active) {
             onChange(active);
         }
-    }, [active]);
+    }, [active, onChange]);
 
     return (
         <Wrapper>
@@ -36,7 +36,7 @@ const Tabs = ({ onChange }) => {
     );
 };
 
-export default Tabs;
+export default React.memo(Tabs);
 
 const Wrapper = styled.div`
     overflow-x: auto;

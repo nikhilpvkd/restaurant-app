@@ -5,11 +5,8 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { addToOrders, getAllOrders, removeFromOrders } from "../features/orderSlice";
 
-const DishCard = ({ dish }) => {
+const DishCard = ({ dish, orderCount = 0 }) => {
     const dispatch = useDispatch();
-    const allOrders = useSelector(getAllOrders);
-    const [orderCount, setOrderCount] = useState(0);
-
     const {
         dish_id,
         dish_name,
@@ -22,10 +19,6 @@ const DishCard = ({ dish }) => {
         dish_Type,
         addonCat,
     } = dish;
-    useEffect(() => {
-        const res = allOrders.filter((orderId) => orderId === dish_id);
-        setOrderCount(res.length);
-    }, [allOrders, dish_id]);
 
     return (
         <Wrapper>

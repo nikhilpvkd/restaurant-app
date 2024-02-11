@@ -46,7 +46,7 @@ const Wrapper = styled.header`
         align-items: center;
         position: relative;
         @media all and (max-width: 480px) {
-            gap: 10px;
+            gap: 0px;
         }
         .text {
             font-size: 20px;

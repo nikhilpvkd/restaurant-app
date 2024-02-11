@@ -4,6 +4,7 @@ import { api } from "./features/api/api";
 
 function App() {
     const { isLoading } = api.endpoints.getAllDishes.useQueryState();
+
     if (isLoading) {
         return (
             <div className="wrapper">
